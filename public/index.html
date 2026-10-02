@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Personal Portfolio</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Linear Lights Out</a>
+  </nav>
+  <div id="mainPage" class="container page-container">
+    <h1 id="gameplayText">Make the buttons match</h1>
+
+    <div class ="game-area">
+      <div id="gameBoard">
+        <div data-button-index="0" class="box"></div>
+        <div data-button-index="1" class="box"></div>
+        <div data-button-index="2" class="box"></div>
+        <div data-button-index="3" class="box"></div>
+        <div data-button-index="4" class="box"></div>
+        <div data-button-index="5" class="box"></div>
+        <div data-button-index="6" class="box"></div>
+      </div>
+
+      <div class="button-container">
+        <button type="button" class="btn" id="newGameButton">New Game</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
