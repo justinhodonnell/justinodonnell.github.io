@@ -1,0 +1,240 @@
+/* ================================
+   Global
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #222;
+    background: #ffffff;
+}
+
+
+/* ================================
+   Hero
+================================ */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 78vh;
+    min-height: 560px;
+    max-height: 800px;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+/* Darkens the image slightly near the top
+   so the navigation remains readable. */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.38) 0%,
+            rgba(0, 0, 0, 0.08) 30%,
+            rgba(0, 0, 0, 0) 60%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ================================
+   Navigation
+================================ */
+
+.site-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 32px 5vw;
+
+    transition:
+        background-color 0.3s ease,
+        padding 0.3s ease;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.site-nav a {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.site-nav a:hover {
+    opacity: 0.7;
+    transform: translateY(-1px);
+}
+
+
+/* Navigation after scrolling */
+
+.site-nav.scrolled {
+    position: fixed;
+
+    background: rgba(20, 20, 20, 0.88);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* ================================
+   Introduction
+================================ */
+
+.intro-section {
+    background: #303030;
+
+    padding: 55px 30px 60px;
+}
+
+.intro-content {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    margin: 0;
+
+    color: #f1f1f1;
+
+    font-size: clamp(1.15rem, 2vw, 1.55rem);
+    line-height: 1.45;
+    font-weight: 400;
+
+    text-align: center;
+}
+
+
+/* ================================
+   Master's Section
+================================ */
+
+.masters-section {
+    background: #ffffff;
+
+    padding: 90px 30px;
+}
+
+.content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.masters-section h2 {
+    margin: 0;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 700px) {
+
+    .hero {
+        height: 65vh;
+        min-height: 500px;
+    }
+
+    .site-nav {
+        padding: 24px 25px;
+    }
+
+    .nav-left,
+    .nav-right {
+        gap: 18px;
+    }
+
+    .site-nav a {
+        font-size: 0.78rem;
+    }
+
+    .intro-section {
+        padding: 40px 24px 45px;
+    }
+
+    .intro-text {
+        font-size: 1.05rem;
+        line-height: 1.55;
+    }
+}
+
+
+/* ================================
+   Very small screens
+================================ */
+
+@media (max-width: 450px) {
+
+    .site-nav {
+        align-items: flex-start;
+    }
+
+    .nav-left,
+    .nav-right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-right {
+        align-items: flex-end;
+    }
+
+    .hero {
+        min-height: 460px;
+    }
+}

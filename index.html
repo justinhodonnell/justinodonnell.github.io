@@ -3,42 +3,102 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
   <link rel="stylesheet" href="styles/main.css">
-  <title>Personal Portfolio</title>
+
+  <title>Justin O'Donnell | Mechanical Engineer</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">Linear Lights Out</a>
-  </nav>
-  <div id="mainPage" class="container page-container">
-    <h1 id="gameplayText">Make the buttons match</h1>
 
-    <div class ="game-area">
-      <div id="gameBoard">
-        <div data-button-index="0" class="box"></div>
-        <div data-button-index="1" class="box"></div>
-        <div data-button-index="2" class="box"></div>
-        <div data-button-index="3" class="box"></div>
-        <div data-button-index="4" class="box"></div>
-        <div data-button-index="5" class="box"></div>
-        <div data-button-index="6" class="box"></div>
+  <!-- Hero / Header -->
+  <header class="hero">
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+
+      <div class="nav-left">
+        <a href="projects.html">Projects</a>
+        <a href="industry.html">Industry Experience</a>
       </div>
 
-      <div class="button-container">
-        <button type="button" class="btn" id="newGameButton">New Game</button>
+      <div class="nav-right">
+        <a href="contact.html">Contact</a>
+        <a href="resume.html">Resume</a>
       </div>
-    </div>
 
-  </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <img
+      src="assets/hero.jpg"
+      alt="Justin O'Donnell"
+      class="hero-image"
+    >
+
+    <!-- Subtle overlay to help navigation remain readable -->
+    <div class="hero-overlay"></div>
+
+  </header>
+
+
+  <!-- Introduction -->
+  <main>
+
+    <section class="intro-section">
+
+      <div class="intro-content">
+
+        <p class="intro-text">
+          Mechanical engineer pursuing a Master's in Product Development
+          at Northeastern University. Through internships at IRP Medical
+          and ZF Transmissions, I've gained experience in medical device
+          and automotive manufacturing while building a strong foundation
+          in engineering design, production, and problem-solving. This is
+          all fueled by my passion to innovate products that improve the
+          lives of others.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Master's Program section will go here later -->
+    <section class="masters-section">
+
+      <div class="content-container">
+
+        <h2>Product Development at Northeastern</h2>
+
+        <!-- Add your Master's content here later -->
+
+      </div>
+
+    </section>
+
+  </main>
+
+
   <script src="scripts/jquery.min.js"></script>
   <script src="scripts/popper.js"></script>
   <script src="scripts/bootstrap-material-design.js"></script>
-  <script>$("body").bootstrapMaterialDesign();</script>
+  <script>
+    $("body").bootstrapMaterialDesign();
+  </script>
+
   <script src="scripts/main.js"></script>
+
 </body>
 
 </html>
